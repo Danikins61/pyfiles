@@ -1,0 +1,20 @@
+import random
+
+names_string = input("Who is in your group? ")
+names = names_string.split(", ")
+
+input("Ask a question about your group: ")
+length = len(names)
+payer = (random.randint(0, length-1))
+payer_name = names[int(payer)]
+print(f"The answer is: {payer_name}")
+again = input("Do you want to play again? ").lower
+while again != "yes":
+    input("Ask a question about your group: ")
+    length = len(names)
+    payer = (random.randint(0, length-1))
+    payer_name = names[int(payer)]
+    print(f"The answer is: {payer_name}")
+    again = input("Do you want to play again? ").lower
+else:
+    print("Okay, bye!")
